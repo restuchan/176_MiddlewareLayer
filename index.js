@@ -14,5 +14,8 @@ const pool = new Pool({
     port: 5432,
 })
 
+app.user(express.json())
+app.use(express.urlencoded({ extended: true })) 
+
 
 
