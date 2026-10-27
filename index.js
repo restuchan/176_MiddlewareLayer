@@ -1,4 +1,4 @@
-import express from express
+import express from 'express'
 import pg from 'pg'
 import Joi from 'joi'
 
@@ -14,7 +14,7 @@ const pool = new Pool({
     port: 5432,
 })
 
-app.user(express.json())
+app.use(express.json())
 app.use(express.urlencoded({ extended: true })) 
 
 // Middleware 
